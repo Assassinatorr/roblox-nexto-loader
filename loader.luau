@@ -22,8 +22,8 @@ box.Parent=gui
 gui.Parent=player:WaitForChild("PlayerGui")
 task.wait()
 local ok,compiled=pcall(function()
-    local source=game:HttpGet("https://raw.githubusercontent.com/Assassinatorr/roblox-nexto-loader/de122c0804361b133be121db6543953af4fd4251/Nexto-1.1.0.client.luau")
-    local run,failure=loadstring(source,"Roblox Nexto 1.1.0")
+    local source=game:HttpGet("https://raw.githubusercontent.com/Assassinatorr/roblox-nexto-loader/main/Nexto-1.2.0.client.luau")
+    local run,failure=loadstring(source,"Roblox Nexto 1.2.0")
     assert(run,failure)
     return run
 end)

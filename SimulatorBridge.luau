@@ -58,7 +58,7 @@ function SimulatorBridge.new(context)
 		end
 		assert(#pads==34,"Nexto requires the standard 34-pad car-football layout")
 		assert(#cars<=6,"Nexto supports up to six cars")
-		return {ball=body(stateOf(arena.ball)),cars=cars,boostPads=pads},tostring(localId)
+		return {ball=body(stateOf(arena.ball)),cars=cars,boostPads=pads,tick=arena.tickCount},tostring(localId)
 	end
 	function bridge.SetEnabled(value)
 		enabled=value==true
