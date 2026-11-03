@@ -2,6 +2,7 @@
   "version": "1.1.0",
   "payload": "Nexto-1.1.0.client.luau",
   "payload_url": "https://raw.githubusercontent.com/Assassinatorr/roblox-nexto-loader/de122c0804361b133be121db6543953af4fd4251/Nexto-1.1.0.client.luau",
+  "entrypoint_url": "https://raw.githubusercontent.com/Assassinatorr/roblox-nexto-loader/v1.1.0/loader.luau",
   "sha256": "c951cec7ae8793e3aae7e2a86c11473481c2fb50d977e49cc5b3410d2530e87d",
   "model_sha256": "bf5343b5eeacac6bf7cdb75dac4a5c14ba0f94d820eae75f00a211b6119d69fa",
   "task": "car-football",

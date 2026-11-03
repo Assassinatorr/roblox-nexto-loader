@@ -3,7 +3,7 @@
 Public runtime-only distribution of the official pretrained Nexto policy port and its client panel. The development repository and inspected game scripts are private.
 
 ```lua
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Assassinatorr/roblox-nexto-loader/main/loader.luau"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Assassinatorr/roblox-nexto-loader/v1.1.0/loader.luau"))()
 ```
 
 The loader shows a download panel, then fetches the versioned payload and opens the ML control panel. It needs the HTTP and `loadstring` capabilities already supplied by your own client admin environment. It grants no executor permissions.
