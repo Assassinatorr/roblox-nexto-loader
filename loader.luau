@@ -17,8 +17,7 @@ box.TextColor3=Color3.fromRGB(235,242,253)
 box.Font=Enum.Font.Gotham
 box.TextSize=14
 box.TextWrapped=true
-box.Text="NEXTO ML
-Downloading the pretrained client…"
+box.Text="NEXTO ML\nDownloading the pretrained client…"
 box.Parent=gui
 gui.Parent=player:WaitForChild("PlayerGui")
 task.wait()
@@ -29,9 +28,7 @@ local ok,compiled=pcall(function()
     return run
 end)
 if not ok then
-    box.Text="NEXTO DOWNLOAD FAILED
-"..tostring(compiled).."
-Click to close."
+    box.Text="NEXTO DOWNLOAD FAILED\n"..tostring(compiled).."\nClick to close."
     box.Activated:Connect(function()gui:Destroy();UIS.MouseIconEnabled=oldIcon end)
     warn(box.Text)
     return nil
