@@ -15,11 +15,11 @@ box.Font=Enum.Font.Gotham;box.TextSize=14;box.TextWrapped=true
 box.Text="RUGPULL ML\nChecking the executor workspace…";box.Parent=gui;gui.Parent=Players.LocalPlayer:WaitForChild("PlayerGui")
 task.wait()
 local manifest= {
-["version"]="0.1.0",
-["payload"]="RugpullML-0.1.0.client.luau",
-["payload_url"]="https://raw.githubusercontent.com/Assassinatorr/roblox-nexto-loader/c9bda2a054f113cba7a9730b898bb1ef388a94da/rugpull/RugpullML-0.1.0.client.luau",
-["sha256"]="6d6a27782b32b74c1ec19eef28a3ffab91435f0008020c27dd7743936a030597",
-["bytes"]=45181
+["version"]="0.2.0",
+["payload"]="RugpullML-0.2.0.client.luau",
+["payload_url"]="https://raw.githubusercontent.com/Assassinatorr/roblox-nexto-loader/main/rugpull/RugpullML-0.2.0.client.luau",
+["sha256"]="d6b7b6da70656272a0ce9645c914989f6812500e4a75fc7655be75cce6eff3da",
+["bytes"]=49333
 }
 local SHA256=(function()
 -- SHA-256 for loader cache integrity. Only runs during loading, not inference.
