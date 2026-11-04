@@ -94,10 +94,11 @@ end
 function Cache.load(options)
 	local env,manifest=options.environment,options.manifest
 	local config=env.RobloxNextoLoaderConfig or {}
-	local io=config.FileIO or env
+	local io=config.FileIO or options.fileIO or env
 	assert(type(io.readfile)=="function" and type(io.writefile)=="function" and type(io.makefolder)=="function",
 		"This loader needs readfile, writefile and makefolder from your internal executor. Rewire RobloxNextoLoaderConfig.FileIO.")
 	local function read(path)
+		if type(io.isfile)=="function" and not io.isfile(path) then return nil end
 		local ok,value=pcall(io.readfile,path)
 		return if ok and type(value)=="string" then value else nil
 	end
@@ -151,21 +152,25 @@ return Cache
 
 end)()
 local manifest= {
-    ["version"]="1.4.0",
-    ["payload"]="Nexto-1.4.0.client.luau",
-    ["payload_url"]="https://raw.githubusercontent.com/Assassinatorr/roblox-nexto-loader/afc727f1b653d90ad9a8503a1eb3a2cb22bbb0aa/Nexto-1.4.0.client.luau",
-    ["sha256"]="23d57916aab53b668b16dc41616ace764e06f1df88da415cca7320b5263cefbb",
-    ["bytes"]=2453470
+    ["version"]="1.4.1",
+    ["payload"]="Nexto-1.4.1.client.luau",
+    ["payload_url"]="https://raw.githubusercontent.com/Assassinatorr/roblox-nexto-loader/main/Nexto-1.4.1.client.luau",
+    ["sha256"]="15789ce5085566d83249de933b54f197fbf800ae4102d1027322d8ec040d6d7b",
+    ["bytes"]=2454367
 }
 local hostHash=nil
-if type(environment.crypt)=="table" and type(environment.crypt.hash)=="function" then
-    local ok,value=pcall(environment.crypt.hash,"abc","sha256")
+local cryptAPI=environment.crypt or crypt
+if type(cryptAPI)=="table" and type(cryptAPI.hash)=="function" then
+    local ok,value=pcall(cryptAPI.hash,"abc","sha256")
     if ok and type(value)=="string" and value:lower()=="ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad" then
-        hostHash=environment.crypt.hash
+        hostHash=cryptAPI.hash
     end
 end
 local ok,compiled=pcall(function()
     local run,cache=Cache.load({environment=environment,manifest=manifest,
+        fileIO={readfile=environment.readfile or readfile,writefile=environment.writefile or writefile,
+            makefolder=environment.makefolder or makefolder,isfolder=environment.isfolder or isfolder,
+            isfile=environment.isfile or isfile},
         decode=function(value)return Http:JSONDecode(value)end,
         encode=function(value)return Http:JSONEncode(value)end,
         status=function(value)box.Text="NEXTO ML\n"..value;task.wait()end,

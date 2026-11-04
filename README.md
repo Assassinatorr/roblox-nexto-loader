@@ -3,7 +3,7 @@
 Public runtime-only distribution of the official pretrained Nexto policy port and its client panel. The development repository and inspected game scripts are private.
 
 ```lua
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Assassinatorr/roblox-nexto-loader/v1.4.0/loader.luau"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Assassinatorr/roblox-nexto-loader/v1.4.1/loader.luau"))()
 ```
 
 The loader reads `roblox-nexto-path.json` in the executor workspace (created with cacheFolder set to roblox-nexto if absent), then checks the versioned cached client. A missing/corrupt copy is downloaded from the pinned revision, checked for byte length and SHA-256, compiled, written, read back and verified before its file contents execute. A valid cache avoids the payload download. The host supplies HTTP, loadstring, readfile, writefile, makefolder and normally isfolder. Rewire `RobloxNextoLoaderConfig.FileIO` if needed. Paths stay relative to the host's executor workspace; no installation directory is scanned. It grants no executor permissions.
@@ -24,6 +24,6 @@ Supported profiles: automatic attachment to the inspected live simulator, an opt
 
 `SimulatorBridge.luau` is an optional original bridge module for your own simulation code; install it beside your client controller and supply the live arena, local-car selector and input interfaces. It contains no copied game scripts. State and controls stay on the client and are not uploaded to this repository.
 
-Version: 1.4.0. Source model: [Rolv-Arild/Necto](https://github.com/Rolv-Arild/Necto), revision `2e6ed7d6ed2b352e8ff529d4a12a0c9c70c28cca`.
+Version: 1.4.1. Source model: [Rolv-Arild/Necto](https://github.com/Rolv-Arild/Necto), revision `2e6ed7d6ed2b352e8ff529d4a12a0c9c70c28cca`.
 
 Licence: **CC BY-NC-SA 4.0, noncommercial use only**. Attribution and full licence are included. Original Nexto authors do not endorse this port. Keyboard controls share axes and can differ from the original independent bot-controller outputs. Match strength and physics transfer must be checked in each game.
