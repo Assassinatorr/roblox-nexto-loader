@@ -76,7 +76,7 @@ function SimulatorBridge.new(context)
 		since[name]=if down then (since[name] or os.clock()) else nil
 	end
 	local input,originalRead,botRead=context.Input,nil,nil
-	if input then
+	if input and context.InterceptInput~=false then
 		assert(type(input.Read)=="function" and context.Bindings and context.Settings,"Input bridge requires Read, Bindings and Settings")
 		originalRead=input.Read
 		botRead=function(...)
