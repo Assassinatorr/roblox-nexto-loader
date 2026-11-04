@@ -1,11 +1,22 @@
 {
-  "version": "1.4.1",
-  "payload": "Nexto-1.4.1.client.luau",
-  "payload_url": "https://raw.githubusercontent.com/Assassinatorr/roblox-nexto-loader/234973497b0ae7be6255fb3ffcd8ffcbce6ffef3/Nexto-1.4.1.client.luau",
-  "bytes": 2454367,
-  "entrypoint_url": "https://raw.githubusercontent.com/Assassinatorr/roblox-nexto-loader/v1.4.1/loader.luau",
-  "sha256": "15789ce5085566d83249de933b54f197fbf800ae4102d1027322d8ec040d6d7b",
+  "version": "1.5.0",
+  "payload": "Nexto-1.5.0.client.luau",
+  "payload_url": "https://raw.githubusercontent.com/Assassinatorr/roblox-nexto-loader/main/Nexto-1.5.0.client.luau",
+  "bytes": 2466367,
+  "entrypoint_url": "https://raw.githubusercontent.com/Assassinatorr/roblox-nexto-loader/v1.5.0/loader.luau",
+  "sha256": "0bf49c2332112937fdd7c6f4eb50d7735023e8c11b0289373a1598f1755f37a5",
   "model_sha256": "bf5343b5eeacac6bf7cdb75dac4a5c14ba0f94d820eae75f00a211b6119d69fa",
   "task": "car-football",
-  "profile_schema": "roblox-nexto/car-football@1"
+  "profile_schema": "roblox-nexto/car-football@1",
+  "built_in_place_profiles": [
+    {
+      "place_id": 101880234193261,
+      "profile_id": "place-101880234193261",
+      "modes": [
+        "soccar",
+        "standard-free-play"
+      ],
+      "maximum_cars": 6
+    }
+  ]
 }
