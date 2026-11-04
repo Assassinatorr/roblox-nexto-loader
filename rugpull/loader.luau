@@ -17,7 +17,7 @@ task.wait()
 local manifest= {
 ["version"]="0.1.0",
 ["payload"]="RugpullML-0.1.0.client.luau",
-["payload_url"]="https://raw.githubusercontent.com/Assassinatorr/roblox-nexto-loader/main/rugpull/RugpullML-0.1.0.client.luau",
+["payload_url"]="https://raw.githubusercontent.com/Assassinatorr/roblox-nexto-loader/c9bda2a054f113cba7a9730b898bb1ef388a94da/rugpull/RugpullML-0.1.0.client.luau",
 ["sha256"]="6d6a27782b32b74c1ec19eef28a3ffab91435f0008020c27dd7743936a030597",
 ["bytes"]=45181
 }
