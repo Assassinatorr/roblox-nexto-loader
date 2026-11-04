@@ -1,0 +1,11 @@
+{
+  "version": "0.1.0",
+  "place_id": 138310989671326,
+  "payload": "RugpullML-0.1.0.client.luau",
+  "bytes": 45181,
+  "sha256": "6d6a27782b32b74c1ec19eef28a3ffab91435f0008020c27dd7743936a030597",
+  "model": "online disjoint LinUCB, 12 arms, 8 features",
+  "pretrained": false,
+  "payload_url": "https://raw.githubusercontent.com/Assassinatorr/roblox-nexto-loader/main/rugpull/RugpullML-0.1.0.client.luau",
+  "entrypoint_url": "https://raw.githubusercontent.com/Assassinatorr/roblox-nexto-loader/rugpull-v0.1.0/rugpull/loader.luau"
+}

@@ -29,3 +29,5 @@ Supported profiles: the new place profile, automatic attachment to the original 
 Version: 1.5.0. Source model: [Rolv-Arild/Necto](https://github.com/Rolv-Arild/Necto), revision `2e6ed7d6ed2b352e8ff529d4a12a0c9c70c28cca`.
 
 Licence: **CC BY-NC-SA 4.0, noncommercial use only**. Attribution and full licence are included. Original Nexto authors do not endorse this port. Keyboard controls share axes and can differ from the original independent bot-controller outputs. Match strength and physics transfer must be checked in each game.
+
+The separate [Rugpull ML runtime](rugpull/README.md) is an original online-learning client for the user's owned Rugpull Simulator game. Its readable source and MIT licence are in `rugpull/`; it uses its own model, cache and panel.
