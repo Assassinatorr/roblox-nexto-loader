@@ -154,7 +154,7 @@ end)()
 local manifest= {
     ["version"]="1.5.0",
     ["payload"]="Nexto-1.5.0.client.luau",
-    ["payload_url"]="https://raw.githubusercontent.com/Assassinatorr/roblox-nexto-loader/main/Nexto-1.5.0.client.luau",
+    ["payload_url"]="https://raw.githubusercontent.com/Assassinatorr/roblox-nexto-loader/541e5798e6e5618101e98b8ea2c7b701ad7f7552/Nexto-1.5.0.client.luau",
     ["sha256"]="0bf49c2332112937fdd7c6f4eb50d7735023e8c11b0289373a1598f1755f37a5",
     ["bytes"]=2466367
 }
